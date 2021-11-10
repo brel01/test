@@ -10,3 +10,9 @@ E-Commerce Database Management System (EC-DBMS) is a system that is designed to 
 2.Basic Structure:
 ---
 ![alt text](https://github.com/brel01/test/blob/main/erd2.png)
+
+In order to order an item it must reside in your database and exist as a unique item with appropriate name, price, and other attributes like size, color, and weight.
+You'll need to identify who is making the order with unique_id of the customer, whcih will be inserted into ORDER ROW. 
+Each item will have it's own unique Product ID value.
+Vendors might have products with different sizes or colors. Will they be different prices based on size? (For example clothing like XXL sizes could it be a different price than other sizes?) Which brought up the need to create different rows in  for similar products with different attributes (like size). The products Table have a distinct impact on the design of Orders and Order_details tables.
+
