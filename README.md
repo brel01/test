@@ -9,4 +9,4 @@ E-Commerce Database Management System (EC-DBMS) is a system that is designed to 
 
 2.Basic Structure:
 ---
-![alt text](https://github.com/brel01/test/blob/main/erd.png)
+![alt text](https://github.com/brel01/test/blob/main/erd2.png)
