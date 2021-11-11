@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mondoo</title>
+    </head>
+    <style>
+        body{
+            width: 100%;
+            padding: 0px;
+            margin:0px;
+        }
+        .container {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            width: 100px;
+            height: 100px;
+        }
+        
+        section{
+            background-color: #181818;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+        }
+        .box1{
+            width: 50%;
+            background-color: #181818;
+        }
+        .box2 {
+            background-image: url('background.png');
+            width: 50%;
+        }
+        .innerBox{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }        
+        .inputBox{
+            background-color: #2d2b2b;
+            min-width: 300px;
+            height: 35px;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            color:#fff;
+            padding:10px;
+            font-size: 1rem;   
+        }
+        input::placeholder{
+            color:#fff;
+            font-weight: 900;
+            font-size: 1rem;            
+        }
+        input:hover {
+            border: 1px solid #fff;
+        }
+        #headerTxt1 {
+            color: #fff;
+            font-size: 2rem;
+            margin:0px;
+            padding: 0px;
+            font-weight: 900;
+        }
+        #headerTxt2 {
+            color: #fff;
+            font-size: 3rem;
+        }
+
+        #headerTxtSm1{
+            margin:0px;
+            padding: 0px;
+            color:#fff;
+            text-align: center;
+            font-weight: 900;
+        }
+        #headerTxtSm2{
+            color:#cc2f64;
+        }
+
+        #inputLabel{
+            color:#fff,
+        }
+        #loginBtn{
+            background-color: rgba(110, 69, 226, 0.2);
+            border: 1px solid transparent;
+            width: 100%;
+            padding: 20px;
+            border-radius: 6px;
+            color:#fff;
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+        #loginBtn.input:hover{
+            border: 1px solid transparent;
+        }
+    </style>
+    <body>
+        <section>
+            <div class="box1">
+                <div></div>
+                <div class="innerBox">   
+                    
+                    <form action="/action_page.php"  style="display: flex; flex-direction: column; align-items: center; ">
+                        <h1 id="headerTxt1">Welcome to <span id="headerTxt2">Mondoo</span></h1>
+                        <p id="headerTxtSm1" style="margin-bottom: 3%;">Don't have an account? <span id="headerTxtSm2">Sign up for free</p></span></p>
+
+                        <div id="loginForm">
+                            <div style="margin-top: 1%;">
+                                <label for="fname" style="color:#fff; font-weight: 900; padding-bottom: 20">First name:</label><br><br>
+                                <input type="email" class="inputBox" id="useremail" name="useremail" value="" placeholder="Email"><br>
+                            </div>
+
+                            <div style="margin-top: 5%;">
+                                <label for="lname" style="color:#fff; font-weight: 900; padding-bottom: 20" >Last name:</label><br><br>
+                                <input type="password" class="inputBox" id="userpwd"  name="userpwd" value="" placeholder="Password"><br><br>
+                            </div>
+                            
+                            <input type="button"  id="loginBtn" value="Sign in" onclick="sendLoginInput()">
+                            <p style="color: #cc2f64; text-align: center; font-size: 1rem; margin-top: 10%;">Forgot password?</p>
+                        </div>
+                    </form> 
+                    
+                </div>
+            </div>
+            <div class="box2">
+                
+            </div>
+        </section>
+        
+        <script>
+            
+            window.onload = function() {
+                document.getElementById("useremail").value = "";
+                document.getElementById("userpwd").value = "";
+            };
+
+
+
+            setInterval(function() { 
+                    changeLoginBtnColor();
+                }, 
+            100);
+
+            function changeLoginBtnColor() {      
+                // alert("Red");
+                var email = document.getElementById("useremail").value;
+                var pwd = document.getElementById("userpwd").value;          
+                if(email.length > 0){
+                    if(email.search("@") > -1){
+                        if(email.indexOf(".") > -1){          
+                            if(pwd.length > 0 ){                                
+                                document.getElementById("loginBtn").style.background='rgba(110, 69, 226, 1)';
+                            }else{
+                            }
+                        }else{
+                        }
+                    }else{
+                    }  
+                }else{
+                }
+
+            }
+
+            function sendLoginInput(){
+                var email = document.getElementById("useremail").value;
+                var pwd = document.getElementById("userpwd").value;
+                if(email.length > 0){
+                    if(email.search("@") > -1){
+                        if(email.indexOf(".") > -1){         
+                            if(pwd.length >= 6 ){
+                                document.getElementById("useremail").value = "";
+                                document.getElementById("userpwd").value = "";
+
+                                document.getElementById("loginForm").innerHTML = '<input type="button"  id="loginBtn" value="Processing...">';
+                            }else{
+                                alert("Error");
+                            }
+                        }else{
+                            alert("Error");
+                        }
+                    }else{
+                        alert("Error");
+                    }  
+                }else{
+                    alert("Error");
+                }
+
+            };
+        </script>
+    </body>
+</html>
