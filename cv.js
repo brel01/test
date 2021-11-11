@@ -38,9 +38,9 @@ let cv  = [{
   ],
   "Refrence" : [
     {
-      "Name": "Kolade Emmanuel",
-      "Title": "CTO K-dev",
-      "Email": "cto@k-dev.org",
+      "Name": "Abraham Omodara",
+      "Title": "Senior Software Developer @ edves",
+      "Email": "abraham.omodara@edves.net",
     }
   ],
 }]
