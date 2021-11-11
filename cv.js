@@ -1,7 +1,8 @@
 let cv  = [{
   "Fullname": "Arowolaju Olatunde",
   "Email": "arowolajutunde@gmail.com",
-  "phone": "+2348136430771",
+  "Phone": "+2348136430771",
+  "Picture": "https://drive.google.com/file/d/1LbnXuudiIuOxtJVAsbqTeVxhZm78-sws/view?usp=drivesdk",
   "Location": "Lekki phase 2, Lagos State",
   "Skills": ['html', "css", "javascript", "Bootstrap", "jQuery", "MySql", "React", "NodeJS", "React Native", "PHP", "GIT", "Google Cloud", "Express JS", "Mongo DB", "AWS", "Critical thinking"],
   "Objective": "Dedicated developer with four years of experience in web and mobile app development, database administation, marketing and crirtcal thinking with strong creative and analytical skills. Team player with an for detail",
@@ -37,9 +38,9 @@ let cv  = [{
   ],
   "Refrence" : [
     {
-      "name": "Kolade Emmanuel",
+      "Name": "Kolade Emmanuel",
       "Title": "CTO K-dev",
-      "email": "cto@k-dev.org",
+      "Email": "cto@k-dev.org",
     }
   ],
 }]
